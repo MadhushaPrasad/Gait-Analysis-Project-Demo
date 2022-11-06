@@ -1,0 +1,91 @@
+.backgroundImage {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-image: url('https://assets.digitalocean.com/labs/images/community_bg.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+@media only screen and (max-device-width: 425px) {
+
+    body {
+        position: relative;
+
+    }
+
+
+    .backgroundImage {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.6;
+        background-image: url('https://assets.digitalocean.com/labs/images/community_bg.png');
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-device-width: 768px) {
+
+    body {
+        position: relative;
+
+    }
+
+
+    .backgroundImage {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.6;
+        background-image: url('https://assets.digitalocean.com/labs/images/community_bg.png');
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+    }
+}
+
+.webCamDiv {
+    width: 400px;
+    height: 400px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 2px solid black;
+    background-color: aliceblue;
+    border-radius: 18px;
+    z-index: 1000;
+}
+
+#webcam {
+    width: 400px;
+    height: 400px;
+}
+
+.btn {
+    width: 200px;
+    color: #FFFFFF;
+    outline: 2px solid;
+    z-index: 1000;
+    font-weight: bold;
+}
+
+.btn:hover {
+    width: 200px;
+    background-color: #1E9E1E;
+}
