@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <h1 align="center">GAIT ANALYSIS</h1>
+    <meta charset="utf-8"/>
+    <script src="p5.min.js"></script>
+    <script src="ml5.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js"
+            integrity="sha512-bHeT+z+n8rh9CKrSrbyfbINxu7gsBmSHlDCb3gUF1BjmjDzKhoKspyB71k0CIRBSjE5IVQiMMVBgCWjF60qsvA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        #defaultCanvas0 {
+            position: absolute;
+            width: 50% !important;
+            height: 480px;
+            left: 222px;
+        }
+    </style>
+</head>
+<body>
+<script src="stop.js"></script>
+<div align="center" class="wrapper" id="data">
+    <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+    <button id="button-start" type="button" onclick="startCamera()">Start</button>
+    <button id="button-stop" type="button">Stop</button>
+    <button id="button-reset" type="button">Reset</button>
+    <span><input style="visibility: hidden;" type="float" id="cal" value="1.85"/></span>
+    <p id="stride"></p> <!-- Display stride length -->
+    <p id="rightstride"></p> <!-- Display stride length -->
+    <p id="leftstride"></p> <!-- Display stride length -->
+    <p style="color: red" id="knee"></p> <!-- display Knee distance -->
+    <p id="height"></p>
+    <button type="button" id="button-Save" onclick="saveDetails()">Save Highest Details</button>
+</div>
+<div id="pic">
+    <script src="sketch.js"></script>
+</div>
+
+<div class="body d-none">
+    <form name="body_metrics">
+        <input class="form-control mt-2" type=text name=age value="" , placeholder="Age"> <br>
+        <input class="form-control mt-2" type=text name=gender value="" , placeholder="Gender"> <br>
+        <input class="form-control mt-2" type=text name=weight value="" , placeholder="Weight"> <br>
+    </form>
+</div>
+
+<div class="d-none">
+    <textarea id="inputTextToSave"></textarea>
+    <select id="id1">
+        <option value="0">Select options</option>
+        <option value="1">Right stride</option>
+        <option value="2">Left stride</option>
+        <option selected value="3">Stop Collection</option>
+    </select>
+    <script>function savefile() {
+        var content = document.getElementById("inputTextToSave").value;
+        uriContent = "data:application/octet-stream," + encodeURIComponent(content);
+        document.getElementById("dlink").innerHTML = "<a href=" + uriContent + " download=\"savedfile.txt\">Here is the download link</a>";
+    }</script>
+    <button onclick="savefile()">SAVE</button>
+    <p id="dlink"></p>
+</div>
+<div class="table-responsive mt-2 mb-2 tableDiv">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+</div>
+<script src="jquery-3.5.1.min.js"></script>
+</body>
+</html>

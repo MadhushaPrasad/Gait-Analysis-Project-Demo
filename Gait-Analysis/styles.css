@@ -1,0 +1,25 @@
+#pic {
+  width: 200px;
+  float: left;
+  height: 100px;
+  margin: 10px;
+}
+
+#data {
+  width: 200px;
+  float: left;
+  height: 100px;
+  margin: 10px;
+}
+#button-Save{
+  background: green;
+  color: #fff;
+  border: solid 1px #fff;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 18px 10px;
+  width: 180px;
+  margin: 10px;
+  outline: none;
+}
